@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ahmed Slima - Projects</title>
+    <meta name="description" content="اكتشف مشاريع Ahmed Slima، مطور Full Stack متخصص في تطوير تطبيقات الويب والجوال باستخدام .NET وFlutter. حلول تقنية مبتكرة وفعالة.">
+    <meta name="keywords" content="Ahmed Slima, مطور Full Stack, تطوير ويب, تطبيقات جوال, .NET, Flutter, برمجة">
+    <meta name="author" content="Ahmed Slima">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #1a202c;
+            min-height: 100vh;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            color: white;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #63b3ed;
+        }
+        .project-card {
+            background: #2d3748;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(99, 179, 237, 0.3);
+        }
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        @media (max-width: 640px) {
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            .project-img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container px-4 py-12 mx-auto">
+        <section class="text-center mb-12">
+            <img src="./WhatsApp Image 2025-04-12 at 20.03.02_eafc9fe9.jpg" alt="Ahmed Slima - مطور Full Stack" class="profile-img mx-auto mb-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Ahmed Slima</h1>
+            <p class="text-xl md:text-2xl mb-4">Full Stack Engineer and Developer</p>
+            <p class="text-lg max-w-2xl mx-auto">
+                I'm Ahmed Slima, a full-stack developer specializing in building innovative web applications using .NET . I strive to deliver cutting-edge technical solutions focused on high performance and optimal user experience           </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">My projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- مشروع 1 -->
+                <div class="project-card">
+                    <img src="./OIP.jpeg" alt="online store by Ahmed Slima" class="project-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">online store</h3>
+                        <p class="text-gray-300 mb-4">
+                            An integrated e-commerce platform developed using .NET . It supports multiple payment gateways, product management, and a seamless user experience                        </p>
+                        <a href="#" class="text-blue-400 hover:text-blue-600 font-semibold">Project presentation</a>
+                    </div>
+                </div>
+                <!-- مشروع 2 -->
+                <div class="project-card">
+                    <img src="./تخطيط-الموارد-البشرية-جوال-1.webp" alt="Task management system by Ahmed Slima" class="project-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task management system</h3>
+                        <p class="text-gray-300 mb-4">
+                            A web application for task and project management, developed using ASP.NET Core and React. It enables task assignment, progress tracking, and team collaboration               </p>
+                        <a href="#" class="text-blue-400 hover:text-blue-600 font-semibold">Project presentation</a>
+                    </div>
+                </div>
+                <!-- مشروع 3 -->
+                <div class="project-card">
+                    <img src="./OIP (1).jpeg" alt=" Appointment booking application by Ahmed Slima" class="project-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Appointment booking application</h3>
+                        <p class="text-gray-300 mb-4">
+                            A Web Application for booking medical appointments, developed with .NET. It offers instant notifications and easy booking management                        </p>
+                        <a href="#" class="text-blue-400 hover:text-blue-600 font-semibold">Project presentation</a>
+                    </div>
+                </div>
+                <!-- مشروع 4 -->
+                <div class="project-card">
+                    <img src="./download.jpeg" alt="Administrative control panel by Ahmed Slima" class="project-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Administrative control panel</h3>
+                        <p class="text-gray-300 mb-4">
+                            A web-based data management dashboard, developed using .NET and Angular, providing real-time analytics and efficient user management                        </p>
+                        <a href="#" class="text-blue-400 hover:text-blue-600 font-semibold">Project presentation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#4b90ff" },
+                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#4b90ff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
