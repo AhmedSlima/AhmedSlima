@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed slima - Contact me</title>
-    <!-- تضمين Tailwind CSS عبر CDN -->
+    
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- خط عربي احترافي -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <!-- تضمين Font Awesome لأيقونات التواصل الاجتماعي -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            background: #1a202c; /* خلفية داكنة */
+            background: #1a202c; 
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -31,7 +31,7 @@
         }
         .container {
             position: relative;
-            z-index: 1; /* لضمان ظهور المحتوى فوق الجسيمات */
+            z-index: 1; 
         }
         input, textarea {
             border-radius: 8px;
@@ -69,71 +69,71 @@
     </style>
 </head>
 <body class="text-white">
-    <!-- حاوية الجسيمات -->
+    
     <div id="particles-js"></div>
     
-    <!-- المحتوى -->
+    
     <div class="container text-center px-4 py-8 max-w-lg mx-auto">
-        <!-- العنوان الرئيسي -->
+        
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact me</h1>
-        <!-- وصف مختصر -->
+        
         <p class="text-lg md:text-xl mb-6">
             Write your message here or connect with me via social platforms 
         </p>
-        <!-- نموذج التواصل -->
+        
         <form id="contact-form" action="https://formspree.io/f/xgvadrpr" method="POST" class="space-y-4 mb-8">
-            <!-- حقل الاسم -->
+            
             <div>
                 <input type="text" name="name" id="name" placeholder="Name" required 
                        class="w-full px-4 py-2 text-right">
             </div>
-            <!-- حقل البريد الإلكتروني -->
+            
             <div>
                 <input type="email" name="email" id="email" placeholder="Email" required 
                        class="w-full px-4 py-2 text-right">
             </div>
-            <!-- حقل الرسالة -->
+            
             <div>
                 <textarea name="message" id="message" placeholder="Message" required 
                           class="w-full px-4 py-2 text-right h-32 resize-none"></textarea>
             </div>
-            <!-- رسالة النتيجة -->
+            
             <div id="form-message" class="form-message"></div>
-            <!-- زر الإرسال -->
+            
             <button type="submit" 
                     class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
                     Send message           
                  </button>
         </form>
-        <!-- أيقونات التواصل الاجتماعي -->
+        
         <div class="social-icons flex justify-center gap-6 flex-wrap">
-            <!-- LinkedIn -->
+            
             <a href="http://linkedin.com/in/ahmed-slima-383187241" target="_blank" title="LinkedIn">
                 <i class="fab fa-linkedin w-12 h-12 text-blue-400 hover:text-blue-600"></i>
             </a>
-            <!-- Facebook -->
+            
             <a href="https://www.facebook.com/share/1DWfdBbG7p/?mibextid=wwXIfr" target="_blank" title="Facebook">
                 <i class="fab fa-facebook w-12 h-12 text-blue-400 hover:text-blue-600"></i>
             </a>
-            <!-- Instagram -->
+            
             <a href="https://www.instagram.com/ahmed_slima11?igsh=MXdmNjI3cmRwa2x3ZQ%3D%3D&utm_source=qr" target="_blank" title="Instagram">
                 <i class="fab fa-instagram w-12 h-12 text-blue-400 hover:text-blue-600"></i>
             </a>
-            <!-- Telegram -->
+            
             <a href="https://t.me/Ahmedslima11" target="_blank" title="Telegram">
                 <i class="fab fa-telegram w-12 h-12 text-blue-400 hover:text-blue-600"></i>
             </a>
-            <!-- Snapchat -->
+            
             <a href="https://snapchat.com/t/8KX3asFV" target="_blank" title="Snapchat">
                 <i class="fab fa-snapchat w-12 h-12 text-blue-400 hover:text-blue-600"></i>
             </a>
         </div>
     </div>
 
-    <!-- تضمين Particles.js عبر CDN -->
+    
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        // إعداد Particles.js
+        
         particlesJS("particles-js", {
             "particles": {
                 "number": {
@@ -206,7 +206,7 @@
             "retina_detect": true
         });
 
-        // التحكم بنموذج التواصل
+        
         document.getElementById('contact-form').addEventListener('submit', async function (e) {
             e.preventDefault();
             
@@ -214,7 +214,7 @@
             const formMessage = document.getElementById('form-message');
 
             try {
-                // إرسال البيانات إلى Formspree
+                
                 const response = await fetch(form.action, {
                     method: 'POST',
                     body: new FormData(form),
@@ -224,15 +224,15 @@
                 });
 
                 if (response.ok) {
-                    // عرض رسالة نجاح
+                    
                     formMessage.className = 'form-message success';
                     formMessage.textContent = 'Your message has been sent successfully!';
-                    form.reset(); // إعادة تعيين النموذج
+                    form.reset(); 
                 } else {
                     throw new Error('Failed to send message');
                 }
             } catch (error) {
-                // عرض رسالة خطأ
+                
                 formMessage.className = 'form-message error';
                 formMessage.textContent = 'An error occurred while sending the message, try again';
             }
